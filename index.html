@@ -12,7 +12,7 @@ body{
 background-color: black;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='696' height='83.5' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='11.3' stroke-opacity='0.47'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
 background-position-x: 0px;
-animation: 5s animate;
+
 font-family: 'Roboto', sans-serif;
 }
 @keyframes animate {
@@ -145,7 +145,10 @@ margin-right: auto;
 padding-right: 4px;
 }
 }
-
+.selected{
+    border: 3px solid white;
+    transition: 0.1s ease;
+}
 
 </style>
 <div class="head">
@@ -162,16 +165,16 @@ padding-right: 4px;
   </div>
 <h2>Stages</h2>
   <div class="stepper-wrapper">
-    <div class="stepper-item completed" onclick="openstage('one')">
-      <div class="step-counter">1</div>
+    <div class="stepper-item completed" >
+      <div class="step-counter" onclick="openstage(this,'one')">1</div>
       <div class="step-name">First</div>
     </div>
-    <div class="stepper-item completed" onclick="openstage('two')">
-      <div class="step-counter">2</div>
+    <div class="stepper-item completed" >
+      <div class="step-counter" onclick="openstage(this,'two')">2</div>
       <div class="step-name">Second</div>
     </div>
-    <div class="stepper-item active" onclick="openstage('final')">
-      <div class="step-counter">3</div>
+    <div class="stepper-item active" >
+      <div class="step-counter" onclick="openstage(this,'final')">3</div>
       <div class="step-name">Third</div>
     </div>
 
@@ -229,15 +232,19 @@ padding-right: 4px;
 <script>
 
 const stage= document.getElementsByClassName("stagecontainer");
-const openstage=(val)=>{
+const counter = document.getElementsByClassName("step-counter")
+const openstage=(target,val)=>{
+
     for (let i=0;i<stage.length;i++){
-        stage[i].style.display="none"
+        stage[i].style.display="none";
+        counter[i].classList.remove("selected")
 
     }
     console.log(val)
-    document.getElementsByClassName("stagecontainer "+val)[0].style.display="block"
+    document.getElementsByClassName("stagecontainer "+val)[0].style.display="block";
+    target.classList.add("selected")
 }
-openstage('one')
+counter[0].click()
 var target_date = new Date(2023, 2, 17, 08, 30, 0).getTime() ; 
 console.log(new Date(2023, 2, 17, 13, 30, 0).getMonth())
 
