@@ -32,7 +32,7 @@ footer .htmltags h1, footer .htmltags h2, footer .htmltags h3, footer .htmltags 
 .column {
     display: flex;
     flex-direction: column;
-    padding: 0 1em;
+    padding:0 0.5em;
     margin-bottom: 30px;
     margin: auto;
     margin-top: 0px;
