@@ -1,47 +1,279 @@
-<center><h1>You have been scammed</h1></center>
-<center><h2>Dont be a victim to unknown links</h2></center>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="timer.css">
+        <link rel="stylesheet" href="stepper.css">  
+    </head>
 <style>
-h1,h2,h3{
-color:white;
-font-size:50px;
-margin-top:60px;
-margin-bottom:0px;
-}
-h2{
-font-size:22px;
-margin-top:0px;
-font-weight:300
-}
-h3{
-font-size:30px;
-margin-left:30px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
-background:black
+
+background-color: black;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='696' height='83.5' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='11.3' stroke-opacity='0.47'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+background-position-x: 0px;
+animation: 5s animate;
+font-family: 'Roboto', sans-serif;
 }
-ol{
-margin-top:10px;
-color:white
+@keyframes animate {
+0%{
+    background-position-x: 0px;
+
 }
+50%{
+
+background-position-x: 223px;
+}
+100%{
+
+    background-position-x: 0;
+}
+
+
+}
+.head{
+
+
+    margin: 2rem;
+    margin-top: 138px;
+margin-left: 80;
+}
+
+.head h1{
+    color: white;
+    font-size: 56px;
+    font-family: 'Tilt Warp', cursive;
+    
+}
+.head h2{
+
+    color: white;
+margin-top: 38px;
+font-size: 25px;
+font-family: 'Tilt Warp', cursive;
+}
+.stagecontainer{
+
+
+background: transparent;
+border-radius: 18px;
+padding-top: 2px;
+font-size: 25px;
+margin-top: 37px;
+padding-bottom: 1px;
+}
+.stagecontainer p{
+
+font-size: 20px;
+margin: 0rem;
+margin-top: 1rem;
+text-justify: inter-word;
+text-align: left;
+margin-top: 0px;
+color: #383838;
+background: white;
+text-align: justify;
+text-justify: inter-word;
+font-family: 'Roboto', sans-serif;
+padding: 1rem;
+}
+
+
+
+.head h3{
+    margin-bottom: 15px;
+font-size: 42px;
+margin-top: 5px;
+font-family: poppins;
+font-family: 'Tilt Warp', cursive;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: white;
+color: transparent;
+}
+.stepper-wrapper{
+
+    margin-top: 5px;
+}
+.knowmore{
+
+    color: #fffefe;
+background-color: transparent;
+width: fit-content;
+border: 1px solid #757575;
+padding: 2px 11px 3px;
+border-radius: 15px;
+font-size: 15px;
+}
+@media screen and (max-width: 800px) {
+.head{
+
+    margin-top: 111px;
+margin-left: 28px;
+
+}
+    .head h1{
+    color: white;
+    font-size: 47px;
+    font-family: 'Tilt Warp', cursive;
+    text-align: left;
+    
+}
+#countdown{
+
+    margin-left: 0px;
+    width: 100%;
+    height: 84px;
+}
+#countdown #tiles > span {
+    width: 100%;
+margin-left: 5px;
+margin-right: 5px;
+padding: 3px;
+font-size: 40px;
+}
+#countdown #tiles {
+
+    display: flex;
+width: fit-content;
+margin-left: auto;
+margin-right: auto;
+}
+#countdown .labels li {
+
+    width: fit-content;
+    padding-left: 6px;
+padding-right: 4px;
+}
+}
+
+
 </style>
+<div class="head">
+   <center>
+<h1>A National Level Hackathon</h1>
+<div id="countdown">
+    <div id='tiles'></div>
+    <div class="labels">
+      <li>Days</li>
+      <li>Hours</li>
+      <li>Mins</li>
+      <li>Secs</li>
+    </div>
+  </div>
+<h2>Stages</h2>
+  <div class="stepper-wrapper">
+    <div class="stepper-item completed" onclick="openstage('one')">
+      <div class="step-counter">1</div>
+      <div class="step-name">First</div>
+    </div>
+    <div class="stepper-item completed" onclick="openstage('two')">
+      <div class="step-counter">2</div>
+      <div class="step-name">Second</div>
+    </div>
+    <div class="stepper-item active" onclick="openstage('final')">
+      <div class="step-counter">3</div>
+      <div class="step-name">Third</div>
+    </div>
 
-<h2>
-    <h3> Now go and find an advocate through our system to file a case against us.
-</h3>
-      <br>
-  <br>
-<ol>If you ever fall victim to these links, you can file a case in the following sections:<br><BR>
+  </div>
+  <div class="knowmore">Click on the stages</div>
+  <div>
+  <div class="stagecontainer one">
+    <h3>First Stage</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and 
+        typesetting industry. Lorem Ipsum has been the industry's
+         standard dummy text ever since the 1500s, when an unknown 
+         printer took a galley of type and scrambled it to make a type 
+         specimen book. It has survived not only five centuries, but also the leap 
+         into electronic typesetting, remaining essentially unchanged. It was popularised 
+         in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+         with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 
 
-  
-<li>The Indian Penal Code, 1860: Sections 419, 420, and 465 of the Indian Penal Code make it illegal to cheat or defraud someone using false identities, including anonymous phishing links.</li>
+    </p>
+   <div class="stagecontainer two">
+    <h3>Stage 2</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and 
+        typesetting industry. Lorem Ipsum has been the industry's
+         standard dummy text ever since the 1500s, when an unknown 
+         printer took a galley of type and scrambled it to make a type 
+         specimen book. It has survived not only five centuries, but also the leap 
+         into electronic typesetting, remaining essentially unchanged. It was popularised 
+         in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+         with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 
-<li>The Information Technology Act, 2000: Section 66D of the Information Technology Act makes it a criminal offence to cheat or defraud someone using a computer resource or communication device.</li>
 
-<li>The Consumer Protection Act of 2019: This act provides consumers with the right to seek compensation for any harm caused by misleading advertisements, including phishing links that deceive consumers into providing their personal information.
+    </p>
 
-</li>
 
-</ol>
+   </div>
+   <div class="stagecontainer final">
+    <h3>Stage Final</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and 
+        typesetting industry. Lorem Ipsum has been the industry's
+         standard dummy text ever since the 1500s, when an unknown 
+         printer took a galley of type and scrambled it to make a type 
+         specimen book. It has survived not only five centuries, but also the leap 
+         into electronic typesetting, remaining essentially unchanged. It was popularised 
+         in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
+         with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
 
-</h2>
+
+    </p>
+
+
+   </div>
+</div>
+</center>
+</div>
+<script>
+
+const stage= document.getElementsByClassName("stagecontainer");
+const openstage=(val)=>{
+    for (let i=0;i<stage.length;i++){
+        stage[i].style.display="none"
+
+    }
+    console.log(val)
+    document.getElementsByClassName("stagecontainer "+val)[0].style.display="block"
+}
+openstage('one')
+var target_date = new Date(2023, 2, 17, 08, 30, 0).getTime() ; 
+console.log(new Date(2023, 2, 17, 13, 30, 0).getMonth())
+
+// set the countdown date
+var days, hours, minutes, seconds; // variables for time units
+
+var countdown = document.getElementById("tiles"); // get tag element
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000);
+
+function getCountdown(){
+
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+
+
+
+</script>
+</html>
