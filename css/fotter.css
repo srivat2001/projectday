@@ -159,6 +159,10 @@ border-radius: 20px;
     margin-bottom: 18px;
 
    }
+   .about p:last-child {
+    margin-bottom: 0px;
+
+   }
    iframe{
     border: 0;
 width: 100%;
